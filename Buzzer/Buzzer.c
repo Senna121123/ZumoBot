@@ -14,7 +14,7 @@ void initClckBuzz(){//Init function for Buzzer
 
 void buzzer(uint8_t iteraties){//function for Buzzer
     int i;
-    for (i = 0; i <= iteraties; i++){
+    for (i = 0; i = iteraties; i++){
         TCCR4C |= (1<<PWM4D);//Zet de buzzer aan op fastPWM
         _delay_ms(500);
         TCCR4C &= ~(1<<PWM4D);//Zet de buzzer uit fastPWM
