@@ -6,6 +6,19 @@
 #include <avr/interrupt.h>
 #include <float.h>
 
+void initClckBuzz();
+void buzzer(uint8_t);
+void initUsart();
+uint8_t readChar();
+void writeChar(char);
+void writeString(char []);
+void writeInt(uint16_t);
+void writeFloat(float);
+void initDrive();
+void wheels(double, double, int);
+void driveDirection(char, int);
+void driveControl(int);
+
 volatile char newChar, oldChar;
 char direction;
 double userSpeed;
