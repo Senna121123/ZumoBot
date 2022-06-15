@@ -65,12 +65,12 @@ void writeInt(uint16_t i) {
 }
 
 void writeFloat(float fl){
-		float t = fl * 10;      //variable used for decimal numbers
-		float i = (int)fl * 10; //variable for whole numbers without decimal numbers
-		int b = ((int)t-(int)i);//Get the decimal numbers
-		writeInt((int)fl);      //Print the whole numbers
-		writeChar(',');         //Add a comma
-		writeInt(abs(b));       //Print the decimal digits
+    float t = fl * 10;      //variable used for decimal numbers
+	float i = (int)fl * 10; //variable for whole numbers without decimal numbers
+	int b = ((int)t-(int)i);//Get the decimal numbers
+	writeInt((int)fl);      //Print the whole numbers
+	writeChar(',');         //Add a comma
+	writeInt(abs(b));       //Print the decimal digits
 }
 
 void initDrive(){
@@ -235,7 +235,7 @@ int main(){
     while(1){                   //Besturing
         if (newChar != oldChar){//checks if a new key is pressed
             oldChar = newChar;  //change the old char to the current new char
-	    	writeChar(newChar); //Prints out the new char
+            writeChar(newChar); //Prints out the new char
             driveControl(0);    //control the motors speed and direction
         }
     }
