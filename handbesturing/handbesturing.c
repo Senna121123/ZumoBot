@@ -24,8 +24,8 @@ char direction;
 double userSpeed;
 
 
-ISR(USART1_RX_vect) {
-     newChar = UDR1;
+ISR(USART1_RX_vect) {//When a new char is received from usart
+     newChar = UDR1;//set newChar to the new received char
 }
 
 void initClckBuzz(){                            //Init function for Buzzer
